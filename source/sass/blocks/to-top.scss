@@ -1,0 +1,23 @@
+.to-top {
+  display: none;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color:$green;
+  background-image: url('../img/svg/arrow.svg');
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center;
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  z-index: 1;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .to-top {
+    bottom: 30px;
+    right: 30px;
+  }
+}

@@ -1,0 +1,71 @@
+.request {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-image: url('../img/req-bg.jpg');
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-size: auto;
+}
+
+.request__inner {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: repeat(3, auto);
+  column-gap: 70px;
+}
+
+.request__form {
+  padding: 30px 56px 40px;
+  background-color: $green;
+}
+
+.request__form {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+
+.request__img-wrapper {
+  position: relative;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.request__img {
+  width: 577px;
+  position: absolute;
+  top: 0;
+  left: -110px;
+  z-index: 1;
+}
+
+
+@media (max-width: 1130px) {
+  .request__img {
+    width: 420px;
+    top: 30px;
+    left: 0;
+  }
+}
+
+@media (max-width: 1110px) {
+  .request__inner {
+    grid-template-columns: 1fr;
+    column-gap: 0;
+  }
+
+  .request__img-wrapper {
+    display: none;
+  }
+
+  .request__form {
+    grid-column: 1 / 3;
+    justify-self: center;
+    padding: 25px 50px 35px;
+  }
+}
+
+@media (max-width: 768px) {
+  .request__form {
+    padding: 20px 45px 30px;
+  }
+}

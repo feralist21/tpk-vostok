@@ -1,0 +1,78 @@
+.vac-list {
+  display: grid;
+  grid-template-columns: 458px 1fr;
+  grid-template-rows: repeat(2, auto);
+  row-gap: 30px;
+}
+
+.vac-list__item {
+  display: flex;
+  align-items: center;
+}
+
+.vac-list__inner {
+  padding-left: 25px;
+}
+
+.vac-list__img {
+  width: 97px;
+  height: 114px;
+  fill: $green;
+}
+
+
+@media (max-width: 1024px) {
+  .vac-list__vacancies-name {
+    font-size: 18px;
+  }
+
+  .vac-list__money {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 970px) {
+  .vac-list{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .vac-list__item {
+    word-break: break-word;
+  }
+  .vac-list__vacancies-name {
+    font-size: 16px;
+  }
+
+  .vac-list__money {
+    font-size: 16px;
+  }
+
+  .vac-list__inner {
+    padding-left: 10px;
+  }
+}
+
+@media (max-width: 625px) {
+  .vac-list{
+    grid-template-columns: 1fr;
+    row-gap: 10px;
+  }
+}
+
+@media (max-width: 425px) {
+  .vac-list__vacancies-name {
+    margin-bottom: 5px;
+    font-size: 14px;
+    line-height: 1.28;
+  }
+
+  .vac-list__money {
+    font-size: 14px;
+  }
+
+  .vac-list__inner {
+    padding-left: 10px;
+  }
+}

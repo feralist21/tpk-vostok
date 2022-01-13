@@ -1,0 +1,173 @@
+.form__title {
+  margin-bottom: 20px;
+  font-size: 34px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: $white;
+}
+
+.form__input {
+  display: block;
+  width: 100%;
+  padding: 17px 0 17px 20px;
+  margin-bottom: 10px;
+  border: none;
+  outline: none;
+  background-color: $light-green;
+  font-family: inherit;
+  font-size: 20px;
+  font-weight: 400;
+  color: $white;
+}
+
+.form__input::placeholder {
+  color: $white;
+}
+
+.form__input:last-child {
+  margin-bottom: 0;
+}
+
+.form__input:focus {
+  outline: 2px solid $white;
+}
+
+.form__wrapper-checkbox {
+  margin-top: 15px;
+  position: relative;
+}
+
+.form__label-checkbox {
+  display: block;
+  padding-left: 30px;
+  position: relative;
+  cursor: pointer;
+  color: $white;
+}
+
+.form__checkbox {
+  width: 22px;
+  height: 22px;
+  opacity: 0;
+  z-index: -10000;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+
+.form__label-checkbox::before,
+.form__label-checkbox::after {
+  content: '';
+  display: block;
+  width: 22px;
+  height: 22px;
+  border: 1px solid $light-green;
+  background-color: $light-green;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.form__label-checkbox::after {
+  display: none;
+  background: #19266e url('../img/sprite.svg#check_active') no-repeat center;
+  background-size: cover;
+  z-index: 10;
+  border-color: $dark-blue;
+}
+
+.form__label-checkbox:hover::before {
+  border: 2px solid $white;
+}
+
+.form__checkbox:focus + .form__label-checkbox::before {
+  border: 2px solid $white;
+}
+
+.form__checkbox:checked + .form__label-checkbox::after {
+  display: block;
+}
+
+.form__label-checkbox a {
+  color: $white;
+  text-decoration: underline;
+}
+
+.form__label-checkbox a:hover {
+  text-decoration: none;
+}
+
+.form__btn {
+  display: block;
+  max-width: 270px;
+  margin: 20px auto 0;
+  padding: 15px 40px;
+  border: 0;
+  outline: 0;
+  color: $green;
+  background-color: $white;
+  font-size: 20px;
+  font-family: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition: color ease 0.3s, background-color ease 0.3s;
+}
+
+.form__btn:focus {
+  outline: 2px solid $white;
+  background-color: $dark-blue;
+  color: $white;
+}
+
+.form__btn:hover {
+  background-color: $dark-blue;
+  color: $white;
+  transition: all ease 0.3s;
+}
+
+@media (max-width: 1024px) {
+  .form__title {
+    font-size: 30px;
+  }
+
+  .form__input {
+    font-size: 18px;
+  }
+
+  .form__btn {
+    font-size: 18px;
+  }
+
+  .form__label-checkbox {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .form__title {
+    font-size: 28px;
+  }
+
+  .form__input {
+    font-size: 16px;
+  }
+
+  .form__btn {
+    font-size: 16px;
+  }
+
+  .form__label-checkbox {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 425px) {
+  .request__form {
+    padding: 20px;
+  }
+  .form__title {
+    font-size: 24px;
+    text-align: center;
+  }
+}

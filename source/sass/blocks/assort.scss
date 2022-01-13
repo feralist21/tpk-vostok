@@ -1,0 +1,117 @@
+.assort {
+  padding: 35px 0;
+  background-image: url('../img/assort-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.assort__title {
+  margin-bottom: 20px;
+  font-size: 34px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: $green;
+  text-transform: uppercase;
+}
+
+.assort__list-title {
+  max-width: 540px;
+  font-weight: 700;
+  color: $white;
+}
+
+.assort__list {
+  margin-top: 5px;
+  margin-bottom: 25px;
+  color: $white;
+  padding-left: 15px;
+}
+
+.assort__list-item {
+  margin-bottom: 3px;
+  position: relative;
+}
+
+.assort__list-item:last-child {
+  margin-bottom: 0;
+}
+
+.assort__list-item::before {
+  content: '-';
+  position: absolute;
+  top: 0;
+  left: -15px;
+  z-index: 1;
+}
+
+.assort__link {
+  color: $green;
+  text-decoration: underline;
+  text-decoration-thickness: from-font;
+}
+
+.assort__link:hover {
+  color: $white;
+}
+
+@media (max-width: 1024px) {
+  .assort__title {
+    font-size: 30px;
+  }
+
+  .assort__list-title {
+    font-size: 18px;
+  }
+
+  .assort__list {
+    margin-bottom: 20px;
+  }
+
+  .assort__list-item {
+    font-size: 18px;
+  }
+
+  .assort__link {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 786px) {
+  .assort__title {
+    font-size: 28px;
+  }
+
+  .assort__list-title {
+    font-size: 16px;
+  }
+
+  .assort__list-item {
+    font-size: 16px;
+  }
+
+  .assort__link {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 425px) {
+  .assort__title {
+    font-size: 24px;
+  }
+
+  .assort__list-title {
+    font-size: 14px;
+    line-height: 1.28;
+  }
+
+  .assort__list-item {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+
+  .assort__link {
+    font-size: 14px;
+  }
+}
+

@@ -1,0 +1,103 @@
+.header {
+  background-color: $dark-blue;
+}
+
+.header__nav {
+  padding: 18px 0;
+}
+
+.header__btn-toggle {
+  display: none;
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  font-size: 0;
+  text-indent: -9999px;
+  appearance: none;
+  box-shadow: none;
+  border-radius: none;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.header__btn-toggle:focus {
+  outline: none;
+}
+
+.header__btn-toggle span {
+  display: block;
+  position: absolute;
+  top: 13px;
+  left: 0px;
+  right: 0px;
+  height: 5px;
+  background: white;
+}
+.header__btn-toggle span::before,
+.header__btn-toggle span::after {
+  position: absolute;
+  display: block;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background-color: #fff;
+  content: "";
+}
+.header__btn-toggle span::before {
+  top: -11px;
+}
+.header__btn-toggle span::after {
+  bottom: -11px;
+}
+
+.header__btn-toggle--htx {
+  background-color: transparent;
+}
+.header__btn-toggle--htx span {
+  transition: background 0s 0.3s;
+}
+.header__btn-toggle--htx span::before,
+.header__btn-toggle--htx span::after {
+  transition-duration: 0.3s, 0.3s;
+  transition-delay: 0.3s, 0s;
+}
+.header__btn-toggle--htx span::before {
+  transition-property: top, transform;
+}
+.header__btn-toggle--htx span::after {
+  transition-property: bottom, transform;
+}
+/* состояние active при открытом меню  */
+.header__btn-toggle--htx.is-active {
+  background-color: transparent;
+}
+.header__btn-toggle--htx.is-active span {
+  background: none;
+}
+.header__btn-toggle--htx.is-active span::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+.header__btn-toggle--htx.is-active span::after {
+  bottom: 0;
+  transform: rotate(-45deg);
+}
+.header__btn-toggle--htx.is-active span::before,
+.header__btn-toggle--htx.is-active span::after {
+  transition-delay: 0s, 0.3s;
+}
+
+@media (max-width: 1024px) {
+  .nav__list-link {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 990px) {
+  .header__btn-toggle {
+    display: block;
+  }
+}

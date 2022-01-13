@@ -1,0 +1,146 @@
+.about-company {
+  padding-top: 45px;
+  padding-bottom: 30px;
+}
+
+.about-company__inner {
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+
+.about-company__left {
+  max-width: 685px;;
+}
+
+.about-company__title {
+  margin-bottom: 20px;
+  font-size: 34px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: $green;
+}
+
+.about-company p {
+  margin-bottom: 25px;
+  text-align: justify;
+}
+
+.about-company__link {
+  display: inline-block;
+  padding: 13px 20px;
+  background-color: $green;
+  color: $white;
+  border: 1px solid $green;
+  transition: border ease 0.3s, color ease 0.3s, background-color ease 0.3s;
+  cursor: pointer;
+}
+
+.about-company__link:focus {
+  outline: 2px solid #000000;
+  outline-offset: 0;
+}
+
+.about-company__link:hover {
+  background-color: $white;
+  color: $green;
+  border: 1px solid $green;
+  transition: all ease 0.3s;
+}
+
+.about-company__link:active {
+  background-color: $green;
+  color: $white;
+}
+
+.about-company__right {
+  position: relative;
+}
+
+.about-company__img {
+  display: block;
+  width: 650px;
+  position: absolute;
+  top: 50px;
+  right: -255px;
+  z-index: 1;
+}
+
+@media (max-width: 1650px) {
+  .about-company__img {
+    width: 550px;
+    right: -150px;
+  }
+}
+
+@media (max-width: 1450px) {
+  .about-company__img {
+    width: 430px;
+    right: -15px;
+  }
+}
+
+@media (max-width: 1170px) {
+  .about-company__img {
+    display: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  .about-company__inner {
+    grid-template-columns: 1fr;
+  }
+
+  .about-company__title {
+    font-size: 30px;
+  }
+
+  .about-company__left {
+    max-width: 100%;
+  }
+
+  .about-company p {
+    margin-bottom: 20px;
+    font-size: 18px;
+  }
+
+  .about-company__link {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-company__title {
+    font-size: 28px;
+    margin-bottom: 15px;
+  }
+
+  .about-company p {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+
+  .about-company__link {
+    padding: 12px 15px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 425px) {
+  .about-company__title {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .about-company p {
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: left;
+    line-height: 1.28;
+  }
+
+  .about-company__link {
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+  }
+}
